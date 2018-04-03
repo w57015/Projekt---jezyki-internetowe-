@@ -1,0 +1,160 @@
+<style type="text/css">
+	*
+		{
+			padding: 0;
+			margin: 0;
+		}
+	
+	body
+		{
+			background-image:url('tlo.png');
+			background-attachment: fixed;
+			/*background-color: white;*/
+	
+		}
+	#kontener
+		{
+			width: 1304px;
+			margin: 0 auto;
+		}
+	#gorna_czesc_kontenera
+		{
+			position: relative;
+			margin-top: 10px;
+			width: 1300px;
+			height: 200px;
+			background-color: rgba(255, 255, 255, 0.8); 
+						
+		}
+		
+	img.logo
+		{
+			position:absolute;
+			border: 0;
+			left: 20px;
+			bottom: 100px;
+		}
+		
+	#gorne_menu
+		{
+			position: absolute;
+			right: 50px;
+			bottom: 90px;
+				
+		}
+	
+	#wlasciwe_gorne_menu li
+		{
+			list-style-type: none;
+			float: left;
+					
+		}
+	
+	#wlasciwe_gorne_menu li a
+		{
+			background-color: none;
+			height: 31px;
+			display: inline-block;
+			float: left;
+			text-decoration: none; 
+			padding: 0px 10px;
+			font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+			font-size: 18px;
+			color: #666666;
+			padding-top: 10px;
+			text-transform: uppercase;
+			font-style: bold;
+		
+		}
+		
+	#wlasciwe_gorne_menu li a:hover
+		{
+			
+			color:  #b3d9ff;
+		}
+	
+	span.link
+		{
+			display: inline-block;
+			margin-top: 10px;
+		}
+		
+	#zawartosc
+		{
+			width: 1304px;
+		}
+		
+	#srodkowa_czesc_zawartosci
+		{
+			background-color: white;
+			width: 1304px;
+			height: 530px;
+			border: 0 solid #e6e6e6;
+			border-left: 2px solid #e6e6e6;
+			border-right: 2px solid #e6e6e6;
+			border-top: 2px solid #e6e6e6;
+			border-bottom: 2px solid #e6e6e6;
+			border-radius: 5px;
+		}
+		
+	#dolna_czesc_zawartosci
+		{
+			background-color: rgba(230, 230, 230, 0.5);
+			width: 1304px;
+			height: 20px;
+		}
+	
+	#onas
+		{
+			text-align: justify;
+			padding: 10px 50px;
+			line-height: 170%;
+			font-family: Tahoma, Geneva, sans-serif;
+			font-size: 16px;
+			float: left;
+    		width: 400px;
+    		height: 500px;
+    		color: #666666;
+    		margin-left: 7%;
+    		margin-top: 1%;
+		
+		}
+			
+	h1
+		{
+			font-family:"Trebuchet MS","Tahoma","Geneva";
+			font-size: 40px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			color: #666666;
+		}
+	
+	h2, h3
+		{
+			font-family:"Trebuchet MS","Tahoma","Geneva";
+			font-size: 40px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			color: #666666;
+		}
+	#misja
+		{
+			text-align: justify;
+			padding: 10px 50px;
+			line-height: 170%;
+			font-family: Tahoma, Geneva, sans-serif;
+			font-size: 16px;
+			float: left;    	
+    		height: 500px;
+    		color: #666666;
+    		margin-left: 4%;
+    		margin-top: 1%;
+    	
+		}
+	#copyright
+		{
+			text-align: center; 
+			font-family: Tahoma, Geneva, sans-serif;
+			font-size: 13px;
+		}
+		</style>
