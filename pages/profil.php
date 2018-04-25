@@ -1,6 +1,17 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['zalogowany']))
+{
+    header('Location: index.php?page=e-learning');
+    exit();
+}
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitionsl.dtd">
-<html xmins="http://www.w3.org/1999/xhtml" xml:lang"pl" lang"pl">
+<html xmins="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -16,19 +27,19 @@
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		
 	</head>
-	<body>
-		<!--<div align="center">   NIE DZIALA PRZEZ TO LOGO-->
+      <body>
+          <!--<div align="center">   NIE DZIALA PRZEZ TO LOGO-->
 			<div id="kontener">
 				<div id="gorna_czesc_kontenera">
-					<a href="carpatiapromotion.pl"><img class "logo" src="img/logo.gif" alt="Logo CarpatiaPromotion.pl" /></a>
+					<a href="index.php?page=home"><img class="logo" src="img/logo.gif" alt="Logo CarpatiaPromotion.pl" /></a>
 					<div id="gorne_menu">
 						<ul id="wlasciwe_gorne_menu">
 		
-							<li> <a href="#"><span class"link">Strona główna</span></a></li>
-							<li> <a href="Uslugi"><span class"link">Usługi </span></a></li>
-							<li> <a href="Portfolio"><span class"link">Portfolio </span></a></li>
-							<li> <a href="E-learning"><span class"link">E-learning </span></a></li>
-							<li> <a href="Kontakt"><span class"link">Kontakt </span></a></li>
+							<li> <a href="index.php?page=home"><span class="link">Strona Główna</span></a></li>
+							<li> <a href="index.php?page=uslugi"><span class="link">Materiały szkoleniowe </span></a></li>
+							<li> <a href="index.php?page=portfolio"><span class="link">Testy </span></a></li>
+                                                        <li> <a href="index.php?page=e-learning"><span class="link">Profil </span></a></li>
+                                                        <li> <a href="index.php?page=logout"><span class="link">Wyloguj </span></a></li>
 						</ul>
 					</div>	
 					<!-- koniec div gorne_menu -->		
@@ -36,7 +47,13 @@
 				<!-- koniec div gorna_czesc_kontenera -->
 			
 				<div id="dolna_czesc_zawartosci">
-				
+				<?php
+
+
+                                    echo "Witaj ".$_SESSION['username'].'![<a href="index.php?page=logout">Wyloguj się!</a>]';
+                                    echo "<br> Email: ".$_SESSION['email'];
+
+                                    ?>
 				
 				</div>
 				<!-- koniec div dolna_czesc_zawartosci -->
@@ -50,9 +67,8 @@
 				
 			</div>
 			 <!--koniec div kontener -->
-	</body>
-	
-	
-	
-	
+          
+          
+                
+</body>
 </html>

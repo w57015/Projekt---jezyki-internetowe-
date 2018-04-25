@@ -1,7 +1,7 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitionsl.dtd">
-<html xmins="http://www.w3.org/1999/xhtml" xml:lang"pl" lang"pl">
+<html xmins="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -21,15 +21,15 @@
 		<!--<div align="center">   NIE DZIALA PRZEZ TO LOGO-->
 			<div id="kontener">
 				<div id="gorna_czesc_kontenera">
-					<a href="index.php"><img class "logo" src="img/logo.gif" alt="Logo CarpatiaPromotion.pl" /></a>
+					<a href="index.php"><img class="logo" src="img/logo.gif" alt="Logo CarpatiaPromotion.pl" /></a>
 					<div id="gorne_menu">
 						<ul id="wlasciwe_gorne_menu">
 		
-							<li> <a href="index.php?page=home"><span class"link">Strona główna</span></a></li>
-							<li> <a href="index.php?page=uslugi"><span class"link">Usługi </span></a></li>
-							<li> <a href="index.php?page=portfolio"><span class"link">Portfolio </span></a></li>
-                                                        <li> <a href="index.php?page=e-learning"><span class"link">E-learning </span></a></li>
-							<li> <a href="index.php?page=kontakt"><span class"link">Kontakt </span></a></li>
+							<li> <a href="index.php?page=home"><span class="link">Strona główna</span></a></li>
+							<li> <a href="index.php?page=uslugi"><span class="link">Usługi </span></a></li>
+							<li> <a href="index.php?page=portfolio"><span class="link">Portfolio </span></a></li>
+                                                        <li> <a href="index.php?page=e-learning"><span class="link">E-learning </span></a></li>
+							<li> <a href="index.php?page=kontakt"><span class="link">Kontakt </span></a></li>
 						</ul>
 					</div>	
 					<!-- koniec div gorne_menu -->		
