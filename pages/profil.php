@@ -31,7 +31,7 @@ if(!isset($_SESSION['zalogowany']))
           <!--<div align="center">   NIE DZIALA PRZEZ TO LOGO-->
 			<div id="kontener">
 				<div id="gorna_czesc_kontenera">
-					<a href="index.php?page=home"><img class="logo" src="img/logo.gif" alt="Logo CarpatiaPromotion.pl" /></a>
+                                    
 					<div id="gorne_menu">
 						<ul id="wlasciwe_gorne_menu">
 		
@@ -42,29 +42,45 @@ if(!isset($_SESSION['zalogowany']))
                                                         <li> <a href="index.php?page=logout"><span class="link">Wyloguj </span></a></li>
 						</ul>
 					</div>	
-					<!-- koniec div gorne_menu -->		
+					<!-- koniec div gorne_menu -->
+                                            <div id="powitanie">
+                                    <?php
+
+
+                                    echo "<br><br>Witaj <em><strong>".$_SESSION['username']."</strong></em>!<br>";
+                                    
+                                 
+                                     
+                                    ?>
+                                        </div>	
+                                    <!-- koniec div powitanie -->
 				</div>
 				<!-- koniec div gorna_czesc_kontenera -->
 			
 				<div id="dolna_czesc_zawartosci">
-				<?php
-
-
-                                    echo "Witaj ".$_SESSION['username'].'![<a href="index.php?page=logout">Wyloguj się!</a>]';
-                                    echo "<br> Email: ".$_SESSION['email'];
-
-                                    ?>
-				
-				</div>
-				<!-- koniec div dolna_czesc_zawartosci -->
-					<div id="copyright">
+                                
+                                    
+                                    <div id="srodkowa_czesc_zawartosci">
+                                    <div id="powitanie_info">
+                                        <p>W zakładce <strong>Materiały szkoleniowe</strong> odnajdziesz wszelkie udostępnione Ci prezentacje oraz artykuły.</p>  <p>Jeżeli uważasz, że wiesz już wszystko, przejdź od razu do zakładki <strong>Testy</strong>.</p>
+                                        <p>W profilu, będziesz mógł ustawić sobie kotka na avatara.</p> <p>Wyloguj to wyloguj. </p> 
+                                    </div>
+                                        <!-- koniec div powitanie.info -->                                     
+                                    </div>
+                                    <!-- koniec div srodkowa czesc zawartosci -->
+                                    <div id="copyright">
 						&copy; 2018 created by <strong> Magdalena Kichman </strong> 
 					
 					</div>
 				<!-- koniec div copyright -->
-			</div>
+				</div>
+				<!-- koniec div dolna_czesc_zawartosci -->
+                                
+                               
+					
+			
+				 </div>
 			<!-- koniec div zawartosc -->
-				
 			</div>
 			 <!--koniec div kontener -->
           

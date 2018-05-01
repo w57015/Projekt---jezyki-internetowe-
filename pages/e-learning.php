@@ -49,13 +49,24 @@
 				<div id="zawartosc">
 				<div id="srodkowa_czesc_zawartosci">
 				
+                                    <div id="logowanie_info">
+                                        <br> <br>
+                                        <p> Witaj w szkoleniowej części <strong>Karpatia Promotion!</strong> </p>
+                                    <p> Zaloguj się na swoje konto, aby uzyskać dostęp do materiałów szkoleniowych. </p>
+                                    
+                           
+                                    </div>
+                                    <!-- koniec div logowanie_info -->
+                                    <div id="logowanie_form">
                                     <form action="index.php?page=logowanie" method="post">
                                         
-                                        Login: <br> <input type="text" name="login" /> <br>
-                                        Hasło: <br> <input type="password" name="haslo" /> <br> <br>
-                                        <input type="submit" value="Zaloguj się" />           
+                                        <br> <br> <strong>Login:</strong> <br> <input type="text" name="login" /> <br>
+                                         <strong>Hasło: </strong><br> <input type="password" name="haslo" /> <br> <br>
+                                         <input type="submit" value="Zaloguj się" />           
                                             
                                     </form>
+                                    </div>
+                                    <!-- koniec div logowanie_form -->
                                    <?php
                                         if(isset($_SESSION['blad'])){
                                             echo $_SESSION['blad'];
