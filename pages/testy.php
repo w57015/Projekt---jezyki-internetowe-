@@ -6,8 +6,48 @@ if(!isset($_SESSION['zalogowany']))
 {
     header('Location: index.php?page=e-learning');
     exit();
+    
+    $con = mysqli_connect('localhost', 'id5275700_root', 'vertrigo', 'quiz');
+    if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
 }
-?>
+  
+}
+
+   
+        for ($i=1; $i<12; $i++){
+    $quiz = "SELECT tresc FROM pytania where id= $i";
+    $query = mysqli_query($con, $quiz);
+    
+    while ($r = mysqli_fetch_array($query)) {
+
+            ?>
+        <h4> <?php echo $r['tresc'] ?> </h4>
+        
+        <?php
+        
+          $quiz = "SELECT odpa FROM pytania where id= $i";
+          $query = mysqli_query($con, $quiz);
+            
+            while ($r = mysqli_fetch_array($query)){
+                ?>
+        
+        <input type="radio" name="quizcheck[<?php echo $r['id'];?>" value="<?php echo $r['odpa']; ?>">
+            
+        <?php echo $r['odpa']; ?>
+        
+
+<?php
+
+            }
+        }
+    } 
+        
+    
+    
+    
+    ?>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitionsl.dtd">
@@ -32,9 +72,7 @@ if(!isset($_SESSION['zalogowany']))
 			<div id="kontener">
 				<div id="gorna_czesc_kontenera">
                                     
-                                        <nav class="rozwijane_menu">
-                                            
-					<div class="rozw_gorne_menu">
+					<div id="gorne_menu">
 						<ul id="wlasciwe_gorne_menu">
 		
 							<li> <a href="index.php?page=home"><span class="link">Strona Główna</span></a></li>
@@ -42,41 +80,21 @@ if(!isset($_SESSION['zalogowany']))
 							<li> <a href="index.php?page=testy"><span class="link">Testy </span></a></li>
                                                         <li> <a href="index.php?page=konto"><span class="link">Profil </span></a></li>
                                                         <li> <a href="index.php?page=logout"><span class="link">Wyloguj </span></a></li>
-						
-                                                        
-                                                </ul>
-                                            
-                                            
+						</ul>
 					</div>	
-                                             <button class="rozwijane_menu_przycisk"></button>
-					<!-- koniec div rozw_gorne_menu -->
-                                       
-                                        </nav>
-                                   
-                                            <div id="powitanie">
-                                                
-                                    <?php
-
-
-                                    echo "<br><br>Witaj <em><strong>".$_SESSION['username']."</strong></em>!<br>";
-                                    
-                                 
-                                     
-                                    ?>
-                                        </div>	
-                                    <!-- koniec div powitanie -->
+					<!-- koniec div gorne_menu -->
+                                         
 				</div>
 				<!-- koniec div gorna_czesc_kontenera -->
 			
 				<div id="dolna_czesc_zawartosci">
+                                    
+                                    
+                                    
                                 
                                     
                                     <div id="srodkowa_czesc_zawartosci">
-                                    <div id="powitanie_info">
-                                        <p>W zakładce <strong>Materiały szkoleniowe</strong> odnajdziesz wszelkie udostępnione Ci prezentacje oraz artykuły.</p>  <p>Jeżeli uważasz, że wiesz już wszystko, przejdź od razu do zakładki <strong>Testy</strong>.</p>
-                                        <p>W profilu, będziesz mógł ustawić sobie kotka na avatara.</p> <p>Wyloguj to wyloguj. </p> 
-                                    </div>
-                                        <!-- koniec div powitanie.info -->                                     
+                                                                    
                                     </div>
                                     <!-- koniec div srodkowa czesc zawartosci -->
                                     <div id="copyright">
