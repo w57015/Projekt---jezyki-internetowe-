@@ -7,46 +7,11 @@ if(!isset($_SESSION['zalogowany']))
     header('Location: index.php?page=e-learning');
     exit();
     
-    $con = mysqli_connect('localhost', 'id5275700_root', 'vertrigo', 'quiz');
-    if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-  
-}
-
-   
-        for ($i=1; $i<12; $i++){
-    $quiz = "SELECT tresc FROM pytania where id= $i";
-    $query = mysqli_query($con, $quiz);
     
-    while ($r = mysqli_fetch_array($query)) {
 
-            ?>
-        <h4> <?php echo $r['tresc'] ?> </h4>
-        
-        <?php
-        
-          $quiz = "SELECT odpa FROM pytania where id= $i";
-          $query = mysqli_query($con, $quiz);
-            
-            while ($r = mysqli_fetch_array($query)){
-                ?>
-        
-        <input type="radio" name="quizcheck[<?php echo $r['id'];?>" value="<?php echo $r['odpa']; ?>">
-            
-        <?php echo $r['odpa']; ?>
-        
+}?>
 
-<?php
 
-            }
-        }
-    } 
-        
-    
-    
-    
-    ?>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -87,16 +52,95 @@ if(!isset($_SESSION['zalogowany']))
 				</div>
 				<!-- koniec div gorna_czesc_kontenera -->
 			
-				<div id="dolna_czesc_zawartosci">
+				
                                     
                                     
                                     
                                 
                                     
                                     <div id="srodkowa_czesc_zawartosci">
+                                        
+                                        <?php 
+
+                ?>
+                    <form action="index.php?page=check" method="post">
+                  <?php
+
+                    $con = mysqli_connect('localhost', 'id5275700_root', 'vertrigo', 'quiz');
+                    if (!$con) {
+                    die("Connection failed: " . mysqli_connect_error());}
+
+                    $iter = "SELECT MAX(id)AS max FROM pytania";
+                    $max = mysqli_query($con, $iter) -> fetch_object();
+
+
+
+
+
+                        for ($i=1; $i<=$max->max; $i++){
+                    $quiz = "SELECT id, tresc FROM pytania where id= $i";
+                    $query = mysqli_query($con, $quiz);
+
+                    while ($r = mysqli_fetch_array($query)) {
+
+                            ?>
+                        <h4> <?php echo $r['id']." ".$r['tresc'] ?> </h4>
+
+                        <?php
+
+                          $quiz = "SELECT * FROM odpowiedzi where id= $i";
+                          $query = mysqli_query($con, $quiz);
+
+                            while ($r = mysqli_fetch_array($query)){
+                                ?>
+
+                        <input type="radio" name="quizcheck [<?php echo $r['id'];?>" value="<?php echo $r['odpa']; ?>">
+
+                        <?php echo $r['odpa']; ?>
+
+                            <input type="radio" name="quizcheck [<?php echo $r['id'];?>" value="<?php echo $r['odpb']; ?>">
+
+                        <?php echo $r['odpb']; ?>
+
+                                <input type="radio" name="quizcheck [<?php echo $r['id'];?>" value="<?php echo $r['odpc']; ?>">
+
+                        <?php echo $r['odpc']; ?>
+
+                                <input type="radio" name="quizcheck [<?php echo $r['id'];?>" value="<?php echo $r['odpd']; ?>">
+
+                        <?php echo $r['odpd']; ?>
+
+
+
+
+                <?php
+
+                            }
+                        }
+                    } 
+
+    
+    
+        
+        
+    
+    
+    ?>
+                </br> <input type="submit" name="submit" value="Submit" class="">
+                
+    
+            	
+    
+    </form>
+
+        <!--<button type="button" formaction="index.php?page=edytuj_test.php">Edytuj/Dodaj pytanie</button>-->
+        <form action="index.php?page=edytuj_test" method="post">
+            <input type="submit" value="Edytuj/ Dodaj pytanie" />
+        </form>
                                                                     
                                     </div>
                                     <!-- koniec div srodkowa czesc zawartosci -->
+                                    <div id="dolna_czesc_zawartosci">
                                     <div id="copyright">
 						&copy; 2018 created by <strong> Magdalena Kichman </strong> 
 					

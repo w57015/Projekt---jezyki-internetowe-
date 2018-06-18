@@ -1,15 +1,7 @@
-<?php
 
-session_start();
 
-if(!isset($_SESSION['zalogowany']))
-{
-    header('Location: index.php?page=e-learning');
-    exit();
-}
-?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitionsl.dtd">
 <html xmins="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
 
@@ -32,7 +24,6 @@ if(!isset($_SESSION['zalogowany']))
 			<div id="kontener">
 				<div id="gorna_czesc_kontenera">
                                     
-                                       
 					<div id="gorne_menu">
 						<ul id="wlasciwe_gorne_menu">
 		
@@ -43,32 +34,49 @@ if(!isset($_SESSION['zalogowany']))
                                                         <li> <a href="index.php?page=logout"><span class="link">Wyloguj </span></a></li>
 						</ul>
 					</div>	
-					<!-- koniec div gorne_menu -->	
-                                   
-                                            <div id="powitanie">
-                                                
-                                    <?php
-
-
-                                    echo "<br><br>Witaj <em><strong>".$_SESSION['username']."</strong></em>!<br>";
-                                    
-                                 
-                                     
-                                    ?>
-                                        </div>	
-                                    <!-- koniec div powitanie -->
+					<!-- koniec div gorne_menu -->
+                                         
 				</div>
 				<!-- koniec div gorna_czesc_kontenera -->
 			
-				
-                                
-                                    
+				<div id="zawartosc">
                                     <div id="srodkowa_czesc_zawartosci">
-                                    <div id="powitanie_info">
-                                        <p>W zakładce <strong>Materiały szkoleniowe</strong> odnajdziesz wszelkie udostępnione Ci prezentacje oraz artykuły.</p>  <p>Jeżeli uważasz, że wiesz już wszystko, przejdź od razu do zakładki <strong>Testy</strong>.</p>
-                                        <p>W profilu, będziesz mógł ustawić sobie kotka na avatara.</p> <p>Wyloguj to wyloguj. </p> 
-                                    </div>
-                                        <!-- koniec div powitanie.info -->                                     
+                                        <?php
+
+    if((!isset($_POST['pytanie'])) || (!isset($_POST['odpA'])) ||(!isset($_POST['odpB'])) ||(!isset($_POST['odpC'])) ||(!isset($_POST['odpD'])) ||(!isset($_POST['odpPr']))) 
+    {
+        echo "Proszę uzupełnić wszystkie pola";
+        
+    }else
+     $con = mysqli_connect('localhost', 'id5275700_root', 'vertrigo', 'quiz');
+    if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());}
+    
+    $pytanie = $_POST['pytanie'];
+    $odpA = $_POST['odpA'];
+    $odpB = $_POST['odpB'];
+    $odpC = $_POST['odpC'];
+    $odpD = $_POST['odpD'];
+    $odpPr = $_POST['odpPr'];
+    
+
+    $dodaj_p = "INSERT INTO `pytania` (`id`, `tresc`) VALUES (NULL, '$pytanie')";
+    $dodaj_odp = "INSERT INTO `odpowiedzi` (`id`, `odpa`, `odpb`, `odpc`, `odpd`, `odp_praw`) VALUES (NULL, '$odpA', '$odpB', '$odpC', '$odpD', '$odpPr')";
+    
+    
+    if (mysqli_query($con, $dodaj_p)) {
+    echo "<h4>Pytanie zostało dodane <br> <br></h4>";
+    } else {
+        echo "Error: " . $dodaj_p . "<br>" . mysqli_error($con);
+    }
+    
+    if (mysqli_query($con, $dodaj_odp)) {
+    echo "<h4>Odpowiedzi zostały dodane<br><br></h4>";
+    } else {
+        echo "Error: " . $dodaj_odp . "<br>" . mysqli_error($con);
+}
+?>
+                                                                    
                                     </div>
                                     <!-- koniec div srodkowa czesc zawartosci -->
                                     <div id="dolna_czesc_zawartosci">

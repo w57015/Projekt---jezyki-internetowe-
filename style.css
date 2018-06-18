@@ -15,7 +15,7 @@
 		}
 	#kontener
 		{
-			width: 1304px;
+			width: 100%;
 			margin: 0 auto;
 		}
 	#gorna_czesc_kontenera
@@ -89,7 +89,7 @@
 	#srodkowa_czesc_zawartosci
 		{
 			background-color: white;
-			width: 1304px;
+			max-width: 100%;
 			min-height: 530px;
 			border: 0 solid #e6e6e6;
 			border-left: 2px solid #e6e6e6;
@@ -97,6 +97,7 @@
 			border-top: 2px solid #e6e6e6;
 			border-bottom: 2px solid #e6e6e6;
 			border-radius: 5px;
+                        padding: 50px;
 		}
 		
 	#dolna_czesc_zawartosci
@@ -117,7 +118,7 @@
     		width: 400px;
     		height: 500px;
     		color: #666666;
-    		margin-left: 7%;
+    		margin-left: 1%;
     		margin-top: 1%;
 		
 		}
@@ -139,6 +140,13 @@
 			margin-bottom: 30px;
 			color: #666666;
 		}
+                h4 {
+                    font-family:"Trebuchet MS","Tahoma","Geneva";
+			font-size: 30px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			color: #666666;
+                }        
 	#misja
 		{
 			text-align: justify;
@@ -206,6 +214,7 @@
             display: inline-block;
             float: right;
             margin-right: 500px;
+            
         }
                
          input[type=text]:focus
@@ -249,72 +258,44 @@
              font-weight: bold;
              
         }
-        .rozwijane_menu
-        {
-            height: 20px;
-            width: 100%;
-            background-color: #e6f3ff;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            box-sizing: border-box;
-            transform: translateY(-0%);
-        }
-        .rozwijane_menu_przycisk
-        {
-            border: 0;
-            border-radius: 5px;
-            background: #e6f3ff;
-            top: 150px;
-            float: right;
-            height: 140px;
-            display: flex;
-            align-items: flex-end;
-            flex-direction: row;
-            width: 200px;
-             transform: translateY(0%);
+        #dodaj_pyt {
+            font-family: Verdana, Geneva, sans-serif;
+            color: #666666;
+            display: inline-block;
+            left: 150px;
+            position: relative;
             
-        }
-        .rozw_gorne_menu
-        {
-            display: flex;
-            box-sizing: border-box;
-            position: absolute;
-            top: 20px;
-            width: 100%;
-            height: 100px;
-            background:#e6f3ff;
-            padding: 0px 10px;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            border-radius: 5px;
-             
-            
-            
-        }
-        .rozw_gorne_menu li
-        {
-                        background-color: none;
-			height: 40px;
-			display: flex;
-                       
-			float: right;
-			text-decoration: none; 
-			padding: 0px 10px;
-			font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-			font-size: 18px;
-			color: #666666;
-			padding-top: 10px;
-			text-transform: uppercase;
-			font-style: bold;
             
         }
         
-        .rozwijane_menu_przycisk:hover
-        {
-            transform: translate(0);
+        #usun_pyt {
+            font-family: Verdana, Geneva, sans-serif;
+            color: #666666;
+            display: inline-block;
+            left: 150px;
+            position: relative;
+            
         }
+        #edycja {
+            column-count: 2;
+            
+        }
+        #edycja input[type=text]{
+            margin-right: 315px;
+            margin-top: -10px;
+            margin-bottom: 35px;
+            left: -170px;
+            position: relative;
+        }
+        #dodaj_pyt input[type=text]:first-of-type {
+            width: 310px;
+            left: 0;
+            
+        }
+        #usun_pyt input[type=text]:first-of-type {
+            left: 0;
+        }
+        
     
         
         
