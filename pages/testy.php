@@ -41,9 +41,8 @@ if(!isset($_SESSION['zalogowany']))
 						<ul id="wlasciwe_gorne_menu">
 		
 							<li> <a href="index.php?page=home"><span class="link">Strona Główna</span></a></li>
-							<li> <a href="index.php?page=materialy"><span class="link">Materiały szkoleniowe </span></a></li>
 							<li> <a href="index.php?page=testy"><span class="link">Testy </span></a></li>
-                                                        <li> <a href="index.php?page=konto"><span class="link">Profil </span></a></li>
+                                                        <li> <a href="index.php?page=profil"><span class="link">Profil </span></a></li>
                                                         <li> <a href="index.php?page=logout"><span class="link">Wyloguj </span></a></li>
 						</ul>
 					</div>	
@@ -51,15 +50,9 @@ if(!isset($_SESSION['zalogowany']))
                                          
 				</div>
 				<!-- koniec div gorna_czesc_kontenera -->
-			
-				
-                                    
-                                    
-                                    
-                                
-                                    
+			            
                                     <div id="srodkowa_czesc_zawartosci">
-                                        
+                                        <div id="test">
                                         <?php 
 
                 ?>
@@ -94,19 +87,19 @@ if(!isset($_SESSION['zalogowany']))
                             while ($r = mysqli_fetch_array($query)){
                                 ?>
 
-                        <input type="radio" name="quizcheck [<?php echo $r['id'];?>" value="<?php echo $r['odpa']; ?>">
+                        <input type="radio" name="quizcheck[<?php echo $r['id'];?>]" value="<?php echo $r['odpa']; ?>">
 
                         <?php echo $r['odpa']; ?>
 
-                            <input type="radio" name="quizcheck [<?php echo $r['id'];?>" value="<?php echo $r['odpb']; ?>">
+                            <input type="radio" name="quizcheck[<?php echo $r['id'];?>]" value="<?php echo $r['odpb']; ?>">
 
                         <?php echo $r['odpb']; ?>
 
-                                <input type="radio" name="quizcheck [<?php echo $r['id'];?>" value="<?php echo $r['odpc']; ?>">
+                                <input type="radio" name="quizcheck[<?php echo $r['id'];?>]" value="<?php echo $r['odpc']; ?>">
 
                         <?php echo $r['odpc']; ?>
 
-                                <input type="radio" name="quizcheck [<?php echo $r['id'];?>" value="<?php echo $r['odpd']; ?>">
+                                <input type="radio" name="quizcheck[<?php echo $r['id'];?>]" value="<?php echo $r['odpd']; ?>">
 
                         <?php echo $r['odpd']; ?>
 
@@ -118,18 +111,8 @@ if(!isset($_SESSION['zalogowany']))
                             }
                         }
                     } 
-
-    
-    
-        
-        
-    
-    
     ?>
-                </br> <input type="submit" name="submit" value="Submit" class="">
-                
-    
-            	
+                               </br></br> </br></br> <input type="submit" name="submit" value="Wyślij" class="">
     
     </form>
 
@@ -137,7 +120,8 @@ if(!isset($_SESSION['zalogowany']))
         <form action="index.php?page=edytuj_test" method="post">
             <input type="submit" value="Edytuj/ Dodaj pytanie" />
         </form>
-                                                                    
+                                        </div>
+                                        <!-- koniec div test -->
                                     </div>
                                     <!-- koniec div srodkowa czesc zawartosci -->
                                     <div id="dolna_czesc_zawartosci">

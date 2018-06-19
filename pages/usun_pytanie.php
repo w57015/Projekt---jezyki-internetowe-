@@ -28,9 +28,8 @@
 						<ul id="wlasciwe_gorne_menu">
 		
 							<li> <a href="index.php?page=home"><span class="link">Strona Główna</span></a></li>
-							<li> <a href="index.php?page=materialy"><span class="link">Materiały szkoleniowe </span></a></li>
 							<li> <a href="index.php?page=testy"><span class="link">Testy </span></a></li>
-                                                        <li> <a href="index.php?page=konto"><span class="link">Profil </span></a></li>
+                                                        <li> <a href="index.php?page=profil"><span class="link">Profil </span></a></li>
                                                         <li> <a href="index.php?page=logout"><span class="link">Wyloguj </span></a></li>
 						</ul>
 					</div>	
@@ -57,13 +56,13 @@
                            $usun_p= "DELETE FROM `pytania` WHERE `pytania`.`id` = $id;";
 
                            if (mysqli_query($con, $usun_p)) {
-                           echo "<h4>Pytanie zostało usuniete<br> <br> </h4>";
+                           echo "<h5>Pytanie zostało usuniete<br> <br> </h5>";
                            } else {
                                echo "Error: " . $usun_p . "<br>" . mysqli_error($con);
                            }
 
                            if (mysqli_query($con, $usun_odp)) {
-                           echo "<h4>Odpowiedzi zostały usuniete<br> <br> </h4>";
+                           echo "<h5>Odpowiedzi zostały usuniete<br> <br> </h5>";
                            } else {
                                echo "Error: " . $usun_odp . "<br>" . mysqli_error($con);
                            }

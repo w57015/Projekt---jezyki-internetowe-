@@ -21,7 +21,7 @@
 		<!--<div align="center">   NIE DZIALA PRZEZ TO LOGO-->
 			<div id="kontener">
 				<div id="gorna_czesc_kontenera">
-					<a href="index.php?page=home"><img class="logo" src="img/logo.gif" alt="Logo CarpatiaPromotion.pl" /></a>
+					
 					<div id="gorne_menu">
 						<ul id="wlasciwe_gorne_menu">
 		

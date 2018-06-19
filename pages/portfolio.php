@@ -16,13 +16,17 @@
 	<meta name="description" content ="Usługi marketingowe w zakresie pozycjonowania stron internetowych w wyszukiwarce Google - SEO" />
 	<meta name="keywords" content="pozycjonowanie, SEO, google, strony internetowe, marketing" />
 		<link rel="stylesheet" href="style.css" type="text/css"/>
+               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 		
 	</head>
 	<body>
 		<!--<div align="center">   NIE DZIALA PRZEZ TO LOGO-->
 			<div id="kontener">
 				<div id="gorna_czesc_kontenera">
-					<a href="index.php?page=home"><img class="logo" src="img/logo.gif" alt="Logo CarpatiaPromotion.pl" /></a>
+					
 					<div id="gorne_menu">
 						<ul id="wlasciwe_gorne_menu">
 		
@@ -38,12 +42,40 @@
 				<!-- koniec div gorna_czesc_kontenera -->
 				<div id="zawartosc">
 				<div id="srodkowa_czesc_zawartosci">
-				
-				
-					<p> Tutaj będą super chwytające fotki portfolio. </p>
-					<p> Ale narazie jest koteł. </p>
+				 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                            <!-- Indicators -->
+                                           <ol class="carousel-indicators">
+                                              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                              <li data-target="#myCarousel" data-slide-to="1"></li>
+                                              <li data-target="#myCarousel" data-slide-to="2"></li>
+                                            </ol>
+
+                                            <!-- Wrapper for slides -->
+                                            <div class="carousel-inner">
+                                              <div class="item active">
+                                                <img src="img/car1.png" alt="Slide1">
+                                              </div>
+
+                                              <div class="item">
+                                                <img src="img/car2.png" alt="Slide2">
+                                              </div>
+
+                                              <div class="item">
+                                                <img src="img/car3.png" alt="Slide3">
+                                              </div>
+                                            </div>
+
+                                            <!-- Left and right controls -->
+                                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                             <span class="glyphicon glyphicon-chevron-left"></span>
+                                              <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                              <span class="glyphicon glyphicon-chevron-right"></span>
+                                              <span class="sr-only">Next</span>
+                                            </a>
+                                          </div>
 					
-						<img src = "img/kot.png" alt="kot">
 				</div>
 				<!-- koniec div srodkowa_czesc_zawartosci -->
 				</div>

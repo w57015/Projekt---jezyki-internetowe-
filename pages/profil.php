@@ -37,9 +37,8 @@ if(!isset($_SESSION['zalogowany']))
 						<ul id="wlasciwe_gorne_menu">
 		
 							<li> <a href="index.php?page=home"><span class="link">Strona Główna</span></a></li>
-							<li> <a href="index.php?page=materialy"><span class="link">Materiały szkoleniowe </span></a></li>
-							<li> <a href="index.php?page=testy"><span class="link">Testy </span></a></li>
-                                                        <li> <a href="index.php?page=konto"><span class="link">Profil </span></a></li>
+                                                        <li> <a href="index.php?page=testy"><span class="link">Testy </span></a></li>
+                                                        <li> <a href="index.php?page=profil"><span class="link">Profil </span></a></li>
                                                         <li> <a href="index.php?page=logout"><span class="link">Wyloguj </span></a></li>
 						</ul>
 					</div>	
@@ -65,8 +64,9 @@ if(!isset($_SESSION['zalogowany']))
                                     
                                     <div id="srodkowa_czesc_zawartosci">
                                     <div id="powitanie_info">
-                                        <p>W zakładce <strong>Materiały szkoleniowe</strong> odnajdziesz wszelkie udostępnione Ci prezentacje oraz artykuły.</p>  <p>Jeżeli uważasz, że wiesz już wszystko, przejdź od razu do zakładki <strong>Testy</strong>.</p>
-                                        <p>W profilu, będziesz mógł ustawić sobie kotka na avatara.</p> <p>Wyloguj to wyloguj. </p> 
+                                        <p> Witaj w szkoleniowej części <strong>Karpatia Promotion!</strong> </p>
+                                        <p> Aby sprawdzić swoją wiedzę, przejdź do sekcji <strong>Testy.</strong> </p>
+                                       
                                     </div>
                                         <!-- koniec div powitanie.info -->                                     
                                     </div>

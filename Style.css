@@ -295,8 +295,36 @@
         #usun_pyt input[type=text]:first-of-type {
             left: 0;
         }
-        
-    
+        .carousel-inner img {
+            width: 100%;
+        }
+        h5 {
+            font-family: Verdana, Geneva, sans-serif;
+            color: #666666;
+            font-size: 16px;
+            
+        }
+        h6 {
+            font-family: Verdana, Geneva, sans-serif;
+            color: #666666;
+            font-size: 25px;
+            text-align: center;
+            font-weight: bold;
+        }
+       #srodkowa_czesc_zawartosci form {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 16px;
+            color: #666666;
+        }
+        #test {
+            width: 100%;
+            text-align: center;
+        }
+        #srodkowa_czesc_zawartosci {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 16px;
+            color: #666666;
+        }
         
         
         #copyright

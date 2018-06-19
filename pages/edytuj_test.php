@@ -26,9 +26,8 @@
 						<ul id="wlasciwe_gorne_menu">
 		
 							<li> <a href="index.php?page=home"><span class="link">Strona Główna</span></a></li>
-							<li> <a href="index.php?page=materialy"><span class="link">Materiały szkoleniowe </span></a></li>
 							<li> <a href="index.php?page=testy"><span class="link">Testy </span></a></li>
-                                                        <li> <a href="index.php?page=konto"><span class="link">Profil </span></a></li>
+                                                        <li> <a href="index.php?page=profil"><span class="link">Profil </span></a></li>
                                                         <li> <a href="index.php?page=logout"><span class="link">Wyloguj </span></a></li>
 						</ul>
 					</div>	
